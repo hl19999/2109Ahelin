@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: blueviolet;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 第一部分盒子怎样出来 -->
+    <div id="div"></div>
+    <!--第二部分点击按钮变宽 -->
+    <button id="btn1">变宽</button>
+    <!--第三部分点击按钮变高 -->
+    <button id="btn2">变高</button>
+    <!--第四部分点击按钮变色 -->
+    <button id="btn3" onclick="colorLength()">变色</button>
+    <!--第五部分点击按钮变高 -->
+    <button id="btn4" onclick="colorHide()">隐藏</button>
+    <!--第六部分点击按钮重置 -->
+    <button id="btn5" onclick="colorShow()">重置</button>
+</body>
+<script>
+    //让div显示
+    $('div').show();
+    // 1. 变宽
+    var btn1 = document.querySelector('#btn1');
+    btn1.onclick = function () {
+        $('div').width(300);
+    }
+    // 2. 变高
+    var btn2 = document.querySelector('#btn2');
+    btn2.onclick = function () {
+        $('div').height(300);
+    }
+    // 3. 变色
+    var div = document.getElementById('div')
+    function colorLength() {
+        div.style.backgroundColor = 'blue';
+    }
+    // 4.隐藏
+    var div = document.getElementById('div')
+    function colorHide() {
+        div.style.display='none';
+    }
+    // 5.重置
+    var div = document.getElementById('div')
+    function colorShow() {
+        div.style.display='block';
+    }
+</script>
+
+</html>

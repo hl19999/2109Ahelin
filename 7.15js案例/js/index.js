@@ -1,0 +1,9 @@
+//第一种入口函数表达方式
+$(function(){//入口函数
+    console.log($('div'));
+})
+//第二种入口函数表达方式
+$(document).ready(function(){//入口函数
+    console.log($('div'));
+})
+//入口函数的作用：先让html代码执行完成之后在执行入口函数的代码，
